@@ -42,6 +42,7 @@ jobs:
           which pytest
           which python
           python -c 'import numpy; from pxr import Gf, Sdf, Usd, UsdGeom, UsdShade, Vt'
+          python -c 'import bpy; from pxr import Gf, Sdf, Usd, UsdGeom, UsdShade, Vt'
           pytest -v test_pxr.py
           python -m pytest -v test_pxr.py
           exit 0
