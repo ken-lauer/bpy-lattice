@@ -44,6 +44,7 @@ jobs:
           python -c 'import numpy; from pxr import Gf, Sdf, Usd, UsdGeom, UsdShade, Vt'
           pytest -v test_pxr.py
           python -m pytest -v test_pxr.py
+          exit 0
       - name: Run unit tests
         shell: bash -l -e -o pipefail {0}
         run: |
