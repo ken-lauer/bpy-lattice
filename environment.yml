@@ -19,3 +19,5 @@ dependencies:
   - mkdocs-jupyter #==0.24.6
   - mkdocstrings-python
   - pip
+  - pip:
+      - bpy
