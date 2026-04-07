@@ -38,12 +38,12 @@ jobs:
       - name: OpenUSD check
         shell: bash -l {0}
         run: |
-          python -c 'import pxr'
+          python -c 'from pxr import Gf, Sdf, Usd, UsdGeom, UsdShade, Vt'
       - name: Run unit tests
         shell: bash -l -e -o pipefail {0}
         run: |
           echo -e '## Test results\n\n```' >> "$GITHUB_STEP_SUMMARY"
-          pytest -v 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          python -m pytest -v 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         with:
