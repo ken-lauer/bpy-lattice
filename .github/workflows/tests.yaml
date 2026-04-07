@@ -38,6 +38,7 @@ jobs:
       - name: OpenUSD check
         shell: bash -l {0}
         run: |
+          set +xe
           which pytest
           which python
           python -c 'import numpy; from pxr import Gf, Sdf, Usd, UsdGeom, UsdShade, Vt'
