@@ -35,6 +35,10 @@ jobs:
         shell: bash -l {0}
         run: |
           conda list
+      - name: OpenUSD check
+        shell: bash -l {0}
+        run: |
+          python -c 'import pxr'
       - name: Run unit tests
         shell: bash -l -e -o pipefail {0}
         run: |
